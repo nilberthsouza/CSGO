@@ -10,15 +10,12 @@ raridades = {
 }
 
 while True:
-    # Pergunta se o usuário quer abrir uma caixa
     resposta = input('Deseja abrir uma caixa? (sim/não) ')
     if resposta.lower() != 'sim':
         break
 
-    # Escolhe um número aleatório entre 0 e 1 para determinar a raridade do item
     numero_aleatorio = random.random()
 
-    # Determina a raridade do item baseado no número aleatório gerado
     raridade = None
     acumulado = 0
     for k, v in raridades.items():
@@ -27,7 +24,6 @@ while True:
             raridade = k
             break
 
-    # Determina o item baseado na raridade
     if raridade == 'amarelo':
         item = 'Luvas excessivamente raras'
     elif raridade == 'vermelho':
@@ -41,7 +37,6 @@ while True:
         item = random.choice(["MAG-7 | Insônia",
 "MP9 | Peso-Pena","SCAR-20 | Fragmentos","P250 | Re.feita","MP5-SD | Liquefação","SG 553 | Ciberforça","Tec-9 | Rebelde"])
 
-    # Imprime o item dropado
     print(f'Você ganhou um(a) {item} ({raridade.title()})!')
 
 print('Obrigado por jogar!')
